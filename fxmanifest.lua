@@ -12,6 +12,8 @@ client_scripts {
 'lib/observers/interiorIdObserver.lua',
 'lib/observers/officeSafeDoorHandler.lua',
 'client.lua',
+
+    -- GTA 5
 'gtav/base.lua',
 'gtav/ammunations.lua',
 'gtav/bahama.lua',
@@ -29,7 +31,8 @@ client_scripts {
 'gtav/trevors_trailer.lua',
 'gtav/ufo.lua',
 'gtav/zancudo_gates.lua',
--- GTA Online
+
+    -- GTA Online
 'gta_online/apartment_hi_1.lua',
 'gta_online/apartment_hi_2.lua',
 'gta_online/house_hi_1.lua',
@@ -43,7 +46,7 @@ client_scripts {
 'gta_online/house_mid_1.lua',
 'gta_online/house_low_1.lua',
 
--- DLC High Life
+    -- DLC High Life
 'dlc_high_life/apartment1.lua',
 'dlc_high_life/apartment2.lua',
 'dlc_high_life/apartment3.lua',
@@ -51,23 +54,23 @@ client_scripts {
 'dlc_high_life/apartment5.lua',
 'dlc_high_life/apartment6.lua',
 
--- DLC Heists
+    -- DLC Heists
 'dlc_heists/carrier.lua',
 'dlc_heists/yacht.lua',
 
--- DLC Executives & Other Criminals
+    -- DLC Executives & Other Criminals
 'dlc_executive/apartment1.lua',
 'dlc_executive/apartment2.lua',
 'dlc_executive/apartment3.lua',
 
--- DLC Finance & Felony
+    -- DLC Finance & Felony
 'dlc_finance/office1.lua',
 'dlc_finance/office2.lua',
 'dlc_finance/office3.lua',
 'dlc_finance/office4.lua',
 'dlc_finance/organization.lua',
 
--- DLC Bikers
+    -- DLC Bikers
 'dlc_bikers/cocaine.lua',
 'dlc_bikers/counterfeit_cash.lua',
 'dlc_bikers/document_forgery.lua',
@@ -77,44 +80,44 @@ client_scripts {
 'dlc_bikers/clubhouse2.lua',
 'dlc_bikers/gang.lua',
 
--- DLC Import/Export
+    -- DLC Import/Export
 'dlc_import/garage1.lua',
 'dlc_import/garage2.lua',
 'dlc_import/garage3.lua',
 'dlc_import/garage4.lua',
 'dlc_import/vehicle_warehouse.lua',
 
--- DLC Gunrunning
+    -- DLC Gunrunning
 'dlc_gunrunning/bunkers.lua',
 'dlc_gunrunning/yacht.lua',
 
--- DLC Smuggler's Run
+    -- DLC Smuggler's Run
 'dlc_smuggler/hangar.lua',
 
--- DLC Doomsday Heist
+    -- DLC Doomsday Heist
 'dlc_doomsday/facility.lua',
 
--- DLC After Hours
+    -- DLC After Hours
 'dlc_afterhours/nightclubs.lua',
 
--- DLC Diamond Casino (Requires forced build 2060 or higher)
+    -- DLC Diamond Casino (Requires forced build 2060 or higher)
 'dlc_casino/casino.lua',
 'dlc_casino/penthouse.lua',
     
--- DLC Los Santos Summer Special (Requires forced build 2060 or higher)
+    -- DLC Los Santos Summer Special (Requires forced build 2060 or higher)
 'dlc_arcade/arcade.lua',
 
--- DLC Cayo Perico (Requires forced build 2189 or higher)
+    -- DLC Cayo Perico (Requires forced build 2189 or higher)
 'dlc_cayoperico/cayoperico.lua',
 'dlc_cayoperico/water.lua',
 'dlc_cayoperico/mph4_gtxd.meta',
 
--- DLC Tuners (Requires forced build 2372 or higher)
+    -- DLC Tuners (Requires forced build 2372 or higher)
 'dlc_tuner/garage.lua',
 'dlc_tuner/meetup.lua',
 'dlc_tuner/methlab.lua',
 
--- DLC The Contract (Requires forced build 2545 or higher)
+    -- DLC The Contract (Requires forced build 2545 or higher)
 'dlc_security/studio.lua',
 'dlc_security/billboards.lua',
 'dlc_security/musicrooftop.lua',
@@ -124,17 +127,17 @@ client_scripts {
 'dlc_security/office3.lua',
 'dlc_security/office4.lua',
 
--- DLC The Criminal Enterprises (Requires forced build 2699 or higher)
+    -- DLC The Criminal Enterprises (Requires forced build 2699 or higher)
 'gta_mpsum2/simeonfix.lua',
 'gta_mpsum2/vehicle_warehouse.lua',
 'gta_mpsum2/warehouse.lua',
 
--- DLC San Andreas Mercenaries (Requires forced build 2944 or higher)
+    -- DLC San Andreas Mercenaries (Requires forced build 2944 or higher)
 'dlc_mercenary/avenger.lua',
 'dlc_mercenary/garage.lua',
 'dlc_mercenary/zancudo.lua',
 
--- DLC Chop Shop (Requires forced build 3095 or higher)
+    -- DLC Chop Shop (Requires forced build 3095 or higher)
 'dlc_chopshop/chopshop.lua',
 }
 
