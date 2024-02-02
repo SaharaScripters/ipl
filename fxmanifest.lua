@@ -30,7 +30,6 @@ client_scripts {
 'gtav/trevors_trailer.lua',
 'gtav/ufo.lua',
 'gtav/zancudo_gates.lua',
-
 -- GTA Online
 'gta_online/apartment_hi_1.lua',
 'gta_online/apartment_hi_2.lua',
