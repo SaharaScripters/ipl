@@ -108,9 +108,9 @@ client_scripts {
     , "dlc_arcade/arcade.lua"
 
     -- DLC Cayo Perico (Requires forced build 2189 or higher)
-    , "dlc_cayoperico/cayoperico.lua"
-    , "dlc_cayoperico/water.lua"
-    , "dlc_cayoperico/mph4_gtxd.meta"
+    -- , "dlc_cayoperico/cayoperico.lua"
+    -- , "dlc_cayoperico/water.lua"
+    -- , "dlc_cayoperico/mph4_gtxd.meta"
 
     -- DLC Tuners (Requires forced build 2372 or higher)
     , "dlc_tuner/garage.lua"
