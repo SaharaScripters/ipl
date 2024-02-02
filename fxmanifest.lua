@@ -12,8 +12,7 @@ client_scripts {
 'lib/observers/interiorIdObserver.lua',
 'lib/observers/officeSafeDoorHandler.lua',
 'client.lua',
--- GTA V
-'gtav/base.lua',   -- Base IPLs to fix holes
+'gtav/base.lua',
 'gtav/ammunations.lua',
 'gtav/bahama.lua',
 'gtav/floyd.lua',
