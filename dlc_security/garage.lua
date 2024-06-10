@@ -4,14 +4,12 @@ end)
 
 MpSecurityGarage = {
     InteriorId = 286721,
-
     Ipl = {
         Interior = {
             ipl = {
                 'sf_int_placement_sec_interior_2_dlc_garage_sec_milo_'
             }
         },
-
         Load = function()
             EnableIpl(MpSecurityGarage.Ipl.Interior.ipl, true)
         end,
@@ -38,7 +36,6 @@ MpSecurityGarage = {
         Entity_Set_Art_3_NoMod = false,
         entity_set_tints = true,
         Entity_Set_Workshop_Lights = true,
-
         Set = function(name, state)
             for entity, _ in pairs(MpSecurityGarage.Entities) do
                 if entity == name then
@@ -63,11 +60,9 @@ MpSecurityGarage = {
             end
         end
     },
-
     LoadDefault = function()
         MpSecurityGarage.Ipl.Load()
         MpSecurityGarage.Entities.Load()
-
         RefreshInterior(MpSecurityGarage.interiorId)
     end
 }

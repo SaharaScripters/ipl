@@ -18,11 +18,9 @@ Ammunations = {
         137729,     -- 19.1, -1110.0, 29.8
         248065 -- 811.0, -2152.0, 29.6
     },
-
     Details = {
-        hooks = "GunStoreHooks", -- Hooks for gun displaying
-        hooksClub = "GunClubWallHooks", -- Hooks for gun displaying
-
+        hooks = 'GunStoreHooks', -- Hooks for gun displaying
+        hooksClub = 'GunClubWallHooks', -- Hooks for gun displaying
         Enable = function(details, state, refresh)
             if details == Ammunations.Details.hooks then
                 SetIplPropState(Ammunations.ammunationsId, details, state, refresh)
@@ -31,7 +29,6 @@ Ammunations = {
             end
         end
     },
-
     LoadDefault = function()
         Ammunations.Details.Enable(Ammunations.Details.hooks, true, true)
         Ammunations.Details.Enable(Ammunations.Details.hooksClub, true, true)

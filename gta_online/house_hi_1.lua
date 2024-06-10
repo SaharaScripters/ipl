@@ -6,35 +6,30 @@ end)
 
 GTAOHouseHi1 = {
     interiorId = 207105,
-
     Strip = {
-        A = "Apart_Hi_Strip_A",
-        B = "Apart_Hi_Strip_B",
-        C = "Apart_Hi_Strip_C",
-
+        A = 'Apart_Hi_Strip_A',
+        B = 'Apart_Hi_Strip_B',
+        C = 'Apart_Hi_Strip_C',
         Enable = function(details, state, refresh)
             SetIplPropState(GTAOHouseHi1.interiorId, details, state, refresh)
         end
     },
     Booze = {
-        A = "Apart_Hi_Booze_A",
-        B = "Apart_Hi_Booze_B",
-        C = "Apart_Hi_Booze_C",
-
+        A = 'Apart_Hi_Booze_A',
+        B = 'Apart_Hi_Booze_B',
+        C = 'Apart_Hi_Booze_C',
         Enable = function(details, state, refresh)
             SetIplPropState(GTAOHouseHi1.interiorId, details, state, refresh)
         end
     },
     Smoke = {
-        A = "Apart_Hi_Smokes_A",
-        B = "Apart_Hi_Smokes_B",
-        C = "Apart_Hi_Smokes_C",
-
+        A = 'Apart_Hi_Smokes_A',
+        B = 'Apart_Hi_Smokes_B',
+        C = 'Apart_Hi_Smokes_C',
         Enable = function(details, state, refresh)
             SetIplPropState(GTAOHouseHi1.interiorId, details, state, refresh)
         end
     },
-
     LoadDefault = function()
         GTAOHouseHi1.Strip.Enable({
             GTAOHouseHi1.Strip.A,
@@ -51,7 +46,6 @@ GTAOHouseHi1 = {
             GTAOHouseHi1.Smoke.B,
             GTAOHouseHi1.Smoke.C
         }, false)
-
         RefreshInterior(GTAOHouseHi1.interiorId)
     end
 }

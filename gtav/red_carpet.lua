@@ -3,8 +3,7 @@ exports('GetRedCarpetObject', function()
 end)
 
 RedCarpet = {
-    ipl = "redCarpet",
-
+    ipl = 'redCarpet',
     Enable = function(state)
         EnableIpl(RedCarpet.ipl, state)
     end

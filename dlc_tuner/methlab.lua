@@ -4,10 +4,8 @@ end)
 
 TunerMethLab = {
     InteriorId = 284673,
-
     Entities = {
         tintable_walls = true,
-
         Set = function(name, state)
             for entity, _ in pairs(TunerMethLab.Entities) do
                 if entity == name then
@@ -32,10 +30,8 @@ TunerMethLab = {
             end
         end
     },
-
     LoadDefault = function()
         TunerMethLab.Entities.Load()
-
         SetInteriorEntitySetColor(TunerMethLab.interiorId, TunerMethLab.Entities.tintable_walls, 3)
         RefreshInterior(TunerMethLab.interiorId)
     end

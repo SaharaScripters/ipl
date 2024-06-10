@@ -5,11 +5,9 @@ end)
 
 HLApartment2 = {
     interiorId = 146177,
-
     Ipl = {
         Interior = {
-            ipl = "mpbusiness_int_placement_interior_v_mp_apt_h_01_milo__1",
-
+            ipl = 'mpbusiness_int_placement_interior_v_mp_apt_h_01_milo__1',
             Load = function()
                 EnableIpl(HLApartment2.Ipl.Interior.ipl, true)
             end,
@@ -19,33 +17,29 @@ HLApartment2 = {
         },
     },
     Strip = {
-        A = "Apart_Hi_Strip_A",
-        B = "Apart_Hi_Strip_B",
-        C = "Apart_Hi_Strip_C",
-
+        A = 'Apart_Hi_Strip_A',
+        B = 'Apart_Hi_Strip_B',
+        C = 'Apart_Hi_Strip_C',
         Enable = function(details, state, refresh)
             SetIplPropState(HLApartment2.interiorId, details, state, refresh)
         end
     },
     Booze = {
-        A = "Apart_Hi_Booze_A",
-        B = "Apart_Hi_Booze_B",
-        C = "Apart_Hi_Booze_C",
-
+        A = 'Apart_Hi_Booze_A',
+        B = 'Apart_Hi_Booze_B',
+        C = 'Apart_Hi_Booze_C',
         Enable = function(details, state, refresh)
             SetIplPropState(HLApartment2.interiorId, details, state, refresh)
         end
     },
     Smoke = {
-        A = "Apart_Hi_Smokes_A",
-        B = "Apart_Hi_Smokes_B",
-        C = "Apart_Hi_Smokes_C",
-
+        A = 'Apart_Hi_Smokes_A',
+        B = 'Apart_Hi_Smokes_B',
+        C = 'Apart_Hi_Smokes_C',
         Enable = function(details, state, refresh)
             SetIplPropState(HLApartment2.interiorId, details, state, refresh)
         end
     },
-
     LoadDefault = function()
         HLApartment2.Ipl.Interior.Load()
         HLApartment2.Strip.Enable({
@@ -63,7 +57,6 @@ HLApartment2 = {
             HLApartment2.Smoke.B,
             HLApartment2.Smoke.C
         }, false)
-
         RefreshInterior(HLApartment2.interiorId)
     end
 }

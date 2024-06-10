@@ -6,19 +6,19 @@ end)
 GTAOHouseLow1 = {
     interiorId = 149761,
     Strip = {
-        A = "Studio_Lo_Strip_A", B = "Studio_Lo_Strip_B", C = "Studio_Lo_Strip_C",
+        A = 'Studio_Lo_Strip_A', B = 'Studio_Lo_Strip_B', C = 'Studio_Lo_Strip_C',
         Enable = function(details, state, refresh)
             SetIplPropState(GTAOHouseLow1.interiorId, details, state, refresh)
         end
     },
     Booze = {
-        A = "Studio_Lo_Booze_A", B = "Studio_Lo_Booze_B", C = "Studio_Lo_Booze_C",
+        A = 'Studio_Lo_Booze_A', B = 'Studio_Lo_Booze_B', C = 'Studio_Lo_Booze_C',
         Enable = function(details, state, refresh)
             SetIplPropState(GTAOHouseLow1.interiorId, details, state, refresh)
         end
     },
     Smoke = {
-        none = "", stage1 = "Studio_Lo_Smoke_A", stage2 = "Studio_Lo_Smoke_B", stage3 = "Studio_Lo_Smoke_C",
+        none = '', stage1 = 'Studio_Lo_Smoke_A', stage2 = 'Studio_Lo_Smoke_B', stage3 = 'Studio_Lo_Smoke_C',
         Set = function(smoke, refresh)
             GTAOHouseLow1.Smoke.Clear(false)
             if smoke ~= nil then
@@ -35,7 +35,6 @@ GTAOHouseLow1 = {
             }, false, refresh)
         end
     },
-
     LoadDefault = function()
         GTAOHouseLow1.Strip.Enable({
             GTAOHouseLow1.Strip.A,
@@ -48,7 +47,6 @@ GTAOHouseLow1 = {
             GTAOHouseLow1.Booze.C
         }, false)
         GTAOHouseLow1.Smoke.Set(GTAOHouseLow1.Smoke.none)
-
         RefreshInterior(GTAOHouseLow1.interiorId)
     end
 }

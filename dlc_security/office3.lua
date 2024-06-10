@@ -4,7 +4,6 @@ end)
 
 MpSecurityOffice3 = {
     InteriorId = 288001,
-
     Ipl = {
         Interior = {
             ipl = {
@@ -70,7 +69,6 @@ MpSecurityOffice3 = {
         Entity_Set_Art_1 = false,
         Entity_Set_Art_2 = false,
         Entity_Set_Art_3 = true,
-
         Set = function(name, state)
             for entity, _ in pairs(MpSecurityOffice3.Entities) do
                 if entity == name then
@@ -95,11 +93,9 @@ MpSecurityOffice3 = {
             end
         end
     },
-
     LoadDefault = function()
         MpSecurityOffice3.Ipl.Load()
         MpSecurityOffice3.Entities.Load()
-
         RefreshInterior(MpSecurityOffice3.interiorId)
     end
 }

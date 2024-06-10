@@ -9,7 +9,6 @@ MpSecurityMusicRoofTop = {
                 'sf_musicrooftop'
             }
         },
-
         Load = function()
             EnableIpl(MpSecurityMusicRoofTop.Ipl.Interior.ipl, true)
         end,
@@ -17,7 +16,6 @@ MpSecurityMusicRoofTop = {
             EnableIpl(MpSecurityMusicRoofTop.Ipl.Interior.ipl, false)
         end
     },
-
     LoadDefault = function()
         MpSecurityMusicRoofTop.Ipl.Load()
     end

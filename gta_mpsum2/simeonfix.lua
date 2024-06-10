@@ -4,14 +4,12 @@ end)
 
 CriminalEnterpriseSmeonFix = {
     InteriorId = 7170,
-
     Ipl = {
         Interior = {
             ipl = {
                 'reh_simeonfix',
             }
         },
-
         Load = function()
             EnableIpl(CriminalEnterpriseSmeonFix.Ipl.Interior.ipl, true)
         end,
@@ -20,7 +18,6 @@ CriminalEnterpriseSmeonFix = {
         end
     },
     Entities = {
-
         Set = function(name, state)
             for entity, _ in pairs(CriminalEnterpriseSmeonFix.Entities) do
                 if entity == name then
@@ -45,11 +42,9 @@ CriminalEnterpriseSmeonFix = {
             end
         end
     },
-
     LoadDefault = function()
         CriminalEnterpriseSmeonFix.Ipl.Load()
         CriminalEnterpriseSmeonFix.Entities.Load()
-
         RefreshInterior(CriminalEnterpriseSmeonFix.interiorId)
     end
 }

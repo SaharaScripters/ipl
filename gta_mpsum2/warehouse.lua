@@ -4,14 +4,12 @@ end)
 
 CriminalEnterpriseWarehouse = {
     InteriorId = 289793,
-
     Ipl = {
         Interior = {
             ipl = {
                 'reh_int_placement_sum2_interior_1_dlc_int_04_sum2_milo_',
             }
         },
-
         Load = function()
             EnableIpl(CriminalEnterpriseWarehouse.Ipl.Interior.ipl, true)
         end,
@@ -25,7 +23,6 @@ CriminalEnterpriseWarehouse = {
         entity_set_style_3 = false,
         entity_set_style_4 = false,
         entity_set_style_5 = true,
-
         Set = function(name, state)
             for entity, _ in pairs(CriminalEnterpriseWarehouse.Entities) do
                 if entity == name then
@@ -50,11 +47,9 @@ CriminalEnterpriseWarehouse = {
             end
         end
     },
-
     LoadDefault = function()
         CriminalEnterpriseWarehouse.Ipl.Load()
         CriminalEnterpriseWarehouse.Entities.Load()
-
         RefreshInterior(CriminalEnterpriseWarehouse.interiorId)
     end
 }

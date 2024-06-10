@@ -4,14 +4,12 @@ end)
 
 CriminalEnterpriseVehicleWarehouse = {
     InteriorId = 289537,
-
     Ipl = {
         Interior = {
             ipl = {
                 'reh_int_placement_sum2_interior_0_dlc_int_03_sum2_milo_',
             }
         },
-
         Load = function()
             EnableIpl(CriminalEnterpriseVehicleWarehouse.Ipl.Interior.ipl, true)
         end,
@@ -25,7 +23,6 @@ CriminalEnterpriseVehicleWarehouse = {
         entity_set_light_option_2 = true,
         entity_set_light_option_3 = true,
         entity_set_tint_options = true,
-
         Set = function(name, state)
             for entity, _ in pairs(CriminalEnterpriseVehicleWarehouse.Entities) do
                 if entity == name then
@@ -50,11 +47,9 @@ CriminalEnterpriseVehicleWarehouse = {
             end
         end
     },
-
     LoadDefault = function()
         CriminalEnterpriseVehicleWarehouse.Ipl.Load()
         CriminalEnterpriseVehicleWarehouse.Entities.Load()
-
         RefreshInterior(CriminalEnterpriseVehicleWarehouse.interiorId)
     end
 }

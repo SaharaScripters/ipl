@@ -5,34 +5,29 @@ end)
 
 GTAOHouseMid1 = {
     interiorId = 148225,
-
     Strip = {
-        A = "Apart_Mid_Strip_A",
-        B = "Apart_Mid_Strip_B",
-        C = "Apart_Mid_Strip_C",
-
+        A = 'Apart_Mid_Strip_A',
+        B = 'Apart_Mid_Strip_B',
+        C = 'Apart_Mid_Strip_C',
         Enable = function(details, state, refresh)
             SetIplPropState(GTAOHouseMid1.interiorId, details, state, refresh)
         end
     },
     Booze = {
-        A = "Apart_Mid_Booze_A",
-        B = "Apart_Mid_Booze_B",
-        C = "Apart_Mid_Booze_C",
-
+        A = 'Apart_Mid_Booze_A',
+        B = 'Apart_Mid_Booze_B',
+        C = 'Apart_Mid_Booze_C',
         Enable = function(details, state, refresh)
             SetIplPropState(GTAOHouseMid1.interiorId, details, state, refresh)
         end
     },
     Smoke = {
-        none = "",
-        stage1 = "Apart_Mid_Smoke_A",
-        stage2 = "Apart_Mid_Smoke_B",
-        stage3 = "Apart_Mid_Smoke_C",
-
+        none = '',
+        stage1 = 'Apart_Mid_Smoke_A',
+        stage2 = 'Apart_Mid_Smoke_B',
+        stage3 = 'Apart_Mid_Smoke_C',
         Set = function(smoke, refresh)
             GTAOHouseMid1.Smoke.Clear(false)
-
             if smoke ~= nil then
                 SetIplPropState(GTAOHouseMid1.interiorId, smoke, true, refresh)
             else
@@ -49,7 +44,6 @@ GTAOHouseMid1 = {
             }, false, refresh)
         end
     },
-
     LoadDefault = function()
         GTAOHouseMid1.Strip.Enable({
             GTAOHouseMid1.Strip.A,
@@ -62,7 +56,6 @@ GTAOHouseMid1 = {
             GTAOHouseMid1.Booze.C
         }, false)
         GTAOHouseMid1.Smoke.Set(GTAOHouseMid1.Smoke.none)
-
         RefreshInterior(GTAOHouseMid1.interiorId)
     end
 }

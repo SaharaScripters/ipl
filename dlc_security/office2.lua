@@ -4,14 +4,12 @@ end)
 
 MpSecurityOffice2 = {
     InteriorId = 288257,
-
     Ipl = {
         Interior = {
             ipl = {
                 'sf_fixeroffice_hw1_08'
             }
         },
-
         Load = function()
             EnableIpl(MpSecurityOffice2.Ipl.Interior.ipl, true)
         end,
@@ -71,7 +69,6 @@ MpSecurityOffice2 = {
         Entity_Set_Art_1 = false,
         Entity_Set_Art_2 = true,
         Entity_Set_Art_3 = false,
-
         Set = function(name, state)
             for entity, _ in pairs(MpSecurityOffice2.Entities) do
                 if entity == name then
@@ -96,10 +93,8 @@ MpSecurityOffice2 = {
             end
         end
     },
-
     LoadDefault = function()
         MpSecurityOffice2.Ipl.Load()
-
         MpSecurityOffice2.Entities.Load()
         RefreshInterior(MpSecurityOffice2.interiorId)
     end

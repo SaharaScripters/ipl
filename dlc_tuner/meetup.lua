@@ -4,7 +4,6 @@ end)
 
 TunerMeetup = {
     InteriorId = 285697,
-
     Ipl = {
         Interior = {
             ipl = {
@@ -12,7 +11,6 @@ TunerMeetup = {
                 'tr_tuner_race_line'
             }
         },
-
         Load = function()
             EnableIpl(TunerMeetup.Ipl.Interior.ipl, true)
         end,
@@ -29,7 +27,6 @@ TunerMeetup = {
         entity_set_test_lights = true,
         entity_set_test_lights_cheap = true,
         entity_set_time_trial = true,
-
         Set = function(name, state)
             for entity, _ in pairs(TunerMeetup.Entities) do
                 if entity == name then
@@ -54,11 +51,9 @@ TunerMeetup = {
             end
         end
     },
-
     LoadDefault = function()
         TunerMeetup.Ipl.Load()
         TunerMeetup.Entities.Load()
-
         RefreshInterior(TunerMeetup.interiorId)
     end
 }

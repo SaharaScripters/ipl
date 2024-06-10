@@ -6,7 +6,6 @@ AddEventHandler('onClientResourceStop', function(res)
     if GetCurrentResourceName() ~= res then
         return
     end
-
     FinanceOrganization.Office.Clear()
 end)
 
@@ -40,7 +39,7 @@ FinanceOrganization = {
             normal = 3,
             light = 1
         },
-        name = "",
+        name = '',
         style = 0,
         color = 0,
         font = 0,
@@ -56,12 +55,11 @@ FinanceOrganization = {
     Office = {
         needToLoad = false,
         loaded = false,
-        target = "prop_ex_office_text",
-        prop = "ex_prop_ex_office_text",
+        target = 'prop_ex_office_text',
+        prop = 'ex_prop_ex_office_text',
         renderId = -1,
         movieId = -1,
         stage = 0,
-
         Init = function()
             DrawEmptyRect(FinanceOrganization.Office.target, FinanceOrganization.Office.prop)
         end,
@@ -70,13 +68,11 @@ FinanceOrganization = {
         end,
         Clear = function()
             if IsNamedRendertargetRegistered(FinanceOrganization.Office.target) then
-                ReleaseNamedRendertarget(GetHashKey(FinanceOrganization.Office.target))
+                ReleaseNamedRendertarget(joaat(FinanceOrganization.Office.target))
             end
-
             if HasScaleformMovieFilenameLoaded(FinanceOrganization.Office.movieId) then
                 SetScaleformMovieAsNoLongerNeeded(FinanceOrganization.Office.movieId)
             end
-
             FinanceOrganization.Office.renderId = -1
             FinanceOrganization.Office.movieId = -1
             FinanceOrganization.Office.stage = 0
@@ -86,15 +82,12 @@ FinanceOrganization = {
 
 CreateThread(function()
     FinanceOrganization.Office.Init()
-
     while true do
         if FinanceOrganization.Office.needToLoad then
             -- Need to load
             if Global.FinanceOffices.isInsideOffice1 or Global.FinanceOffices.isInsideOffice2 or Global.FinanceOffices.isInsideOffice3 or Global.FinanceOffices.isInsideOffice4 then
                 DrawOrganizationName(FinanceOrganization.Name.name, FinanceOrganization.Name.style, FinanceOrganization.Name.color, FinanceOrganization.Name.font)
-
                 FinanceOrganization.Office.loaded = true
-
                 Wait(0) -- We need to call all this every frame
             else
                 Wait(1000) -- We are not inside an office
@@ -103,7 +96,6 @@ CreateThread(function()
             -- Loaded and need to unload
             FinanceOrganization.Office.Clear()
             FinanceOrganization.Office.loaded = false
-
             Wait(1000) -- We can wait longer when we don't need to display text
         else
             -- Not needed to load
@@ -117,38 +109,34 @@ function DrawOrganizationName(name, style, color, font)
         if FinanceOrganization.Office.renderId == -1 then
             FinanceOrganization.Office.renderId = CreateNamedRenderTargetForModel(FinanceOrganization.Office.target, FinanceOrganization.Office.prop)
         end
-
         if FinanceOrganization.Office.movieId == -1 then
-            FinanceOrganization.Office.movieId = RequestScaleformMovie("ORGANISATION_NAME")
+            FinanceOrganization.Office.movieId = RequestScaleformMovie('ORGANISATION_NAME')
         end
-
         FinanceOrganization.Office.stage = 1
     elseif FinanceOrganization.Office.stage == 1 then
         if HasScaleformMovieLoaded(FinanceOrganization.Office.movieId) then
             local parameters = {
                 p0 = {
-                    type = "string",
+                    type = 'string',
                     value = name
                 },
                 p1 = {
-                    type = "int",
+                    type = 'int',
                     value = style
                 },
                 p2 = {
-                    type = "int",
+                    type = 'int',
                     value = color
                 },
                 p3 = {
-                    type = "int",
+                    type = 'int',
                     value = font
                 }
             }
-
-            SetupScaleform(FinanceOrganization.Office.movieId, "SET_ORGANISATION_NAME", parameters)
-
+            SetupScaleform(FinanceOrganization.Office.movieId, 'SET_ORGANISATION_NAME', parameters)
             FinanceOrganization.Office.stage = 2
         else
-            FinanceOrganization.Office.movieId = RequestScaleformMovie("ORGANISATION_NAME")
+            FinanceOrganization.Office.movieId = RequestScaleformMovie('ORGANISATION_NAME')
         end
     elseif FinanceOrganization.Office.stage == 2 then
         SetTextRenderId(FinanceOrganization.Office.renderId)

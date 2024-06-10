@@ -4,7 +4,6 @@ end)
 
 TunerGarage = {
     InteriorId = 285953,
-
     Ipl = {
         Interior = {
             ipl = {
@@ -15,7 +14,6 @@ TunerGarage = {
                 'tr_tuner_shop_strawberry'
             }
         },
-
         Load = function()
             EnableIpl(TunerGarage.Ipl.Interior.ipl, true)
         end,
@@ -59,7 +57,6 @@ TunerGarage = {
         entity_set_tints = true,
         entity_set_train = true,
         entity_set_virus = true,
-
         Set = function(name, state)
             for entity, _ in pairs(TunerGarage.Entities) do
                 if entity == name then
@@ -84,11 +81,9 @@ TunerGarage = {
             end
         end
     },
-
     LoadDefault = function()
         TunerGarage.Ipl.Load()
         TunerGarage.Entities.Load()
-
         RefreshInterior(TunerGarage.interiorId)
     end
 }

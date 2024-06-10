@@ -4,13 +4,11 @@ end)
 
 Simeon = {
     interiorId = 7170,
-
     Ipl = {
         Interior = {
             ipl = {
-                "shr_int"
+                'shr_int'
             },
-
             Load = function()
                 EnableIpl(Simeon.Ipl.Interior.ipl, true)
             end,
@@ -20,14 +18,12 @@ Simeon = {
         }
     },
     Style = {
-        normal = "csr_beforeMission",
-        noGlass = "csr_inMission",
-        destroyed = "csr_afterMissionA",
-        fixed = "csr_afterMissionB",
-
+        normal = 'csr_beforeMission',
+        noGlass = 'csr_inMission',
+        destroyed = 'csr_afterMissionA',
+        fixed = 'csr_afterMissionB',
         Set = function(style, refresh)
             Simeon.Style.Clear(false)
-
             SetIplPropState(Simeon.interiorId, style, true, refresh)
         end,
         Clear = function(refresh)
@@ -40,14 +36,12 @@ Simeon = {
         end
     },
     Shutter = {
-        none = "",
-        opened = "shutter_open",
-        closed = "shutter_closed",
-
+        none = '',
+        opened = 'shutter_open',
+        closed = 'shutter_closed',
         Set = function(shutter, refresh)
             Simeon.Shutter.Clear(false)
-
-            if shutter ~= "" then
+            if shutter ~= '' then
                 SetIplPropState(Simeon.interiorId, shutter, true, refresh)
             else
                 if refresh then
@@ -62,12 +56,10 @@ Simeon = {
             }, false, refresh)
         end
     },
-
     LoadDefault = function()
         Simeon.Ipl.Interior.Load()
         Simeon.Style.Set(Simeon.Style.normal)
         Simeon.Shutter.Set(Simeon.Shutter.opened)
-
         RefreshInterior(Simeon.interiorId)
     end
 }

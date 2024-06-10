@@ -9,7 +9,6 @@ MpSecurityBillboards = {
                 'sf_billboards',
             }
         },
-
         Load = function()
             EnableIpl(MpSecurityBillboards.Ipl.Interior.ipl, true)
         end,
@@ -17,7 +16,6 @@ MpSecurityBillboards = {
             EnableIpl(MpSecurityBillboards.Ipl.Interior.ipl, false)
         end,
     },
-    
     LoadDefault = function()
         MpSecurityBillboards.Ipl.Load()
     end
